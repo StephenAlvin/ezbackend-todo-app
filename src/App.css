@@ -1,0 +1,27 @@
+.root {
+  display: flex;
+  justify-content: center;
+  padding: 12px;
+}
+
+.column {
+  display: flex;
+  flex-direction: column;
+  width: 500px;
+  gap: 8px;
+}
+
+.text-area {
+}
+
+.add-button {
+  width: 50px;
+  padding: 6px;
+}
+
+.todo {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 14px;
+}

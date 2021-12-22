@@ -2,6 +2,8 @@ import './App.css';
 import { useState, useEffect } from 'react';
 import axios from 'axios'
 
+const BASEURL = 'http://localhost:8000'
+
 function App() {
 
   const [todos, setTodos] = useState([])
@@ -9,18 +11,18 @@ function App() {
   const [input, setInput] = useState('')
 
   function getTodos() {
-    axios.get('http://localhost:8000/todo')
+    axios.get(BASEURL + '/todo')
       .then(response => setTodos(response.data))
   }
 
   function createTodo(input) {
-    axios.post('http://localhost:8000/todo', { content: input })
+    axios.post(BASEURL + '/todo', { content: input })
       .then(() => getTodos())
       .then(() => setInput(''))
   }
 
   function deleteTodo(id) {
-    axios.delete(`http://localhost:8000/todo/${id}`)
+    axios.delete(BASEURL + '/todo/' + id)
       .then(() => getTodos())
   }
 

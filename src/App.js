@@ -3,7 +3,7 @@ import { useState, useEffect } from 'react';
 import axios from 'axios'
 
 // const BASEURL = 'http://localhost:8000'
-const BASEURL = 'https://ezbackend-todo-app-backend.herokuapp.com/'
+const BASEURL = 'https://ezbackend-todo-app-backend.herokuapp.com'
 
 
 function App() {
